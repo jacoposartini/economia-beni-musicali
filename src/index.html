@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laboratorio · Economia dei Beni Musicali</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f5a86'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23fff' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="topbar">
+  <button id="menuToggle" title="Menu">☰</button>
+  <div class="brand">Elementi di Economia dei Beni Musicali<small></small></div>
+  <div class="searchwrap">
+    <input id="globalSearch" placeholder="Cerca argomenti, artisti, brani, concetti…" autocomplete="off">
+  </div>
+  <nav class="topnav">
+    <a href="#/home" data-nav="home">Home</a>
+    <a href="#/music" data-nav="music">Discografia</a>
+    <a href="#/maps" data-nav="maps">Mappe</a>
+    <a href="#/scalette" data-nav="scalette">Scalette</a>
+  </nav>
+</header>
+
+<div class="layout">
+  <aside id="sidebar" class="sidebar"></aside>
+  <main id="view" class="view"></main>
+</div>
+
+<div id="player" class="player hidden">
+  <div class="bar">
+    <button class="pbtn" id="pToggle" title="Mostra/Nascondi video">▾</button>
+    <button class="pbtn" id="pPrev" title="Precedente">⏮</button>
+    <button class="pbtn" id="pPlay" title="Pausa">⏸</button>
+    <button class="pbtn" id="pNext" title="Successiva">⏭</button>
+    <div class="pmeta">
+      <div class="pttl" id="pTtl">—</div>
+      <div class="psub" id="pSub"></div>
+    </div>
+    <span class="pqi" id="pQi"></span>
+    <a class="pbtn" id="pOpen" target="_blank" rel="noopener" title="Apri su YouTube">YouTube ↗</a>
+    <button class="pbtn" id="pClose" title="Chiudi">✕</button>
+  </div>
+  <div class="frame"><div id="pFrame"></div></div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
